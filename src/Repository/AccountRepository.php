@@ -47,4 +47,14 @@ class AccountRepository extends ServiceEntityRepository
         ;
     }
     */
+        public function returnAccount()
+    {
+        return [
+            'id' => $this->getId(),
+            'username' => $this->getUsername(),
+            'email' => $this->getEmail(),
+            'parola' => $this->getParola(),
+            'datebirth_acc' => $this->getDatebirthAcc()
+        ];
+    }
 }

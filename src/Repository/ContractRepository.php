@@ -47,4 +47,15 @@ class ContractRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function returnContract()
+    {
+        return [
+            'id' => $this->getId(),
+            'username' => $this->getUsername(),
+            'email' => $this->getEmail(),
+            'parola' => $this->getParola(),
+            'datebirth_acc' => $this->getDatebirthAcc()
+        ];
+    }
 }

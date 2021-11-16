@@ -47,4 +47,15 @@ class ClientRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function returnClient()
+    {
+        return [
+            'id' => $this->getId(),
+            'first_name' => $this->getFirstName(),
+            'last_name' => $this->getLastName(),
+            'CNP' => $this->getCNP(),
+            'email' => $this->getEmail(),
+            'datebirth_cl' => $this->getDatebirthCl()
+        ];
+    }
 }

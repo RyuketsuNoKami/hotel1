@@ -47,4 +47,15 @@ class EmployeeRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function returnEmployee()
+    {
+        return [
+            'id' => $this->getId(),
+            'first_name' => $this->getFirstName(),
+            'last_name' => $this->getLastName(),
+            'email' => $this->getEmail(),
+            'parola' => $this->getParola(),
+            'datebirth_acc' => $this->getDatebirthAcc()
+        ];
+    }
 }
